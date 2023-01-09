@@ -5,47 +5,56 @@
     <title>Liste interactive de cadeaux de Noël</title>
     <meta name="description" content="Créer votre liste de cadeaux et envoyez-là à vos ami.e.s">
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
   <body>
-    <a class="navbar-brand" href="#">L'Atelier du bonheur Mercantile</a>
-    <div>
-      <p class="nav-item">
-        <a class="nav-link active" href="#">Ma liste</a>
+    <div class="flex nav-item">
+      <p class="item1">
+        <a class="navbar-brand" href="#">L'Atelier du bonheur Mercantile</a>
       </p>
-      <p class="nav-item">
+      <p class="item2">
+        <a class="nav-active" href="#">Ma liste</a>
+      </p>
+      <p class="item3">
         <a class="nav-link" aria-current="page" href="#">Listes de mes ami.e.s</a>
       </p>
     </div>
-    <h3>Liste de cadeaux interactive de Fred</h3>
-    <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
-                                    ami.e.s.</p>
-    <h4 class="mb-3">Ajouter un item à la liste</h4>
-    <div class="mb-3">
-      <p>Description :</p>
-      <input type="text" id="desc" name="essai" required></input>
-    </div>
-    <div class="mb-4">
-      <span>Valeur estimée ($) :</span><br>
-      <input type="number" id="valeur">
-    </div>
-    <div class="d-grid gap-2">
-      <button>Ajouter</button>
-      <br>
-      <button>Annuler</button>
-    </div>
-    <h3>Ma liste</h3>
-    <p class="list">
-      <p>Crocs des fêtes : <span>14$</span></p>
-      <p>Une tuque des fêtes :<span>42$</span></p>
-      <p>Un chandail laid des fêtes :<span>25$</span></p>
-      <p>Total: 81$</p>
-    </p>
-    <p class="col-form-label h3">Destinataire:</p>
-    <input id="email" type="text">
-    <div>
-      <button>Confirmer et envoyer</button>
-      <button>Recommencer</button>
+    <div class="flex">
+      <div>
+        <h3>Liste de cadeaux interactive de Fred</h3>
+        <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
+                                        ami.e.s.</p>
+        <h4 class="mb-3">Ajouter un item à la liste</h4>
+        <div class="mb-3">
+          <p>Description :</p>
+          <input type="text" id="desc" name="essai" required></input>
+        </div>
+        <div class="mb-4">
+          <span>Valeur estimée ($) :</span><br>
+          <input type="number" id="valeur">
+        </div>
+        <div class="d-grid gap-2">
+          <button>Ajouter</button>
+          <br>
+          <button>Annuler</button>
+        </div>
+      </div>
+      <div class="liste">
+        <h3>Ma liste</h3>
+        <p class="list">
+          <p>Crocs des fêtes : <span>14$</span></p>
+          <p>Une tuque des fêtes :<span>42$</span></p>
+          <p>Un chandail laid des fêtes :<span>25$</span></p>
+          <p>Total: 81$</p>
+        </p>
+        <p class="col-form-label h3">Destinataire:</p>
+        <input id="email" type="text">
+        <div>
+          <button>Confirmer et envoyer</button>
+          <button>Recommencer</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
