@@ -2,9 +2,13 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,700&display=swap" rel="stylesheet">
     <title>Liste interactive de cadeaux de Noël</title>
     <meta name="description" content="Créer votre liste de cadeaux et envoyez-là à vos ami.e.s">
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
@@ -16,12 +20,12 @@
       <p class="item2">
         <a class="nav-active" href="#">Ma liste</a>
       </p>
-      <p class="item3">
+      <p class="item2">
         <a class="nav-link" aria-current="page" href="#">Listes de mes ami.e.s</a>
       </p>
     </div>
     <div class="flex">
-      <div>
+      <div class="main">
         <h3>Liste de cadeaux interactive de Fred</h3>
         <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
                                         ami.e.s.</p>
@@ -35,23 +39,27 @@
           <input type="number" id="valeur">
         </div>
         <div class="d-grid gap-2">
-          <button>Ajouter</button>
+          <button class="vert">Ajouter</button>
           <br>
           <button>Annuler</button>
         </div>
       </div>
       <div class="liste">
-        <h3>Ma liste</h3>
-        <p class="list">
+        <h4>Ma liste</h4>
+        <div class="list">
           <p>Crocs des fêtes : <span>14$</span></p>
           <p>Une tuque des fêtes :<span>42$</span></p>
           <p>Un chandail laid des fêtes :<span>25$</span></p>
+        </div>
+        <div class="total">
           <p>Total: 81$</p>
-        </p>
-        <p class="col-form-label h3">Destinataire:</p>
-        <input id="email" type="text">
-        <div>
-          <button>Confirmer et envoyer</button>
+        </div>
+        <div class="flex">
+          <p class="col-form-label h3">Destinataire:</p>
+          <input id="email" type="text">
+        </div>
+        <div class="f-grid">
+          <button class="vert">Confirmer et envoyer</button>
           <button>Recommencer</button>
         </div>
       </div>
