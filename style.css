@@ -46,6 +46,13 @@ h4 {
 .vert{
     color: green;
 }
+span{
+    float: right;
+    color: white;
+    background-color: green;
+    border-radius: 15px;
+    padding: 0 15px;
+}
 .list p{
     padding: 0.5rem;
 }
