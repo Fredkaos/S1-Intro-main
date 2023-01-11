@@ -8,7 +8,6 @@
     <title>Liste interactive de cadeaux de Noël</title>
     <meta name="description" content="Créer votre liste de cadeaux et envoyez-là à vos ami.e.s">
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
-
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
@@ -26,7 +25,7 @@
     </div>
     <div class="flex">
       <div class="main">
-        <h3>Liste de cadeaux interactive de Frederic Horth Latreille</h3>
+        <h3>Liste de cadeaux interactive de Frederic</h3>
         <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
                                         ami.e.s.</p>
         <h4 class="mb-3">Ajouter un item à la liste</h4>
@@ -39,7 +38,7 @@
           <input type="number" id="valeur">
         </div>
         <div class="d-grid gap-2">
-          <button class="vert">Ajouter</button>
+          <button onclick="ajouter()" class="vert">Ajouter</button>
           <br>
           <button>Annuler</button>
         </div>
@@ -47,9 +46,9 @@
       <div class="liste">
         <h4>Ma liste</h4>
         <div class="list">
-          <p>Crocs des fêtes : <span>14$</span></p>
-          <p>Une tuque des fêtes :<span>42$</span></p>
-          <p>Un chandail laid des fêtes :<span>25$</span></p>
+          <p id="maListe">Crocs des fêtes <span>14$</span></p>
+          <p>Une tuque des fêtes <span>42$</span></p>
+          <p>Un chandail laid des fêtes <span>25$</span></p>
         </div>
         <div class="total">
           <p>Total: 81$</p>
