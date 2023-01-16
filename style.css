@@ -56,20 +56,10 @@ span{
 }
 .list p{
     padding: 0.5rem;
-}
-.list p:nth-child(1){
-    border: 1px solid lightgray;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-.list p:nth-child(2){
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
-}
-.list p:nth-child(3){
     border: 1px solid lightgray;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-radius: 5px;
 }
 .total{
     text-align: end;
