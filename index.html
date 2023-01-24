@@ -23,45 +23,51 @@
         <a class="nav-link" aria-current="page" href="#">Listes de mes ami.e.s</a>
       </p>
     </div>
-    <div class="flex">
-      <div class="main">
-        <h3>Liste de cadeaux interactive de Frederic</h3>
-        <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
-                                        ami.e.s.</p>
-        <h4 class="mb-3">Ajouter un item à la liste</h4>
-        <div class="mb-3">
-          <p>Description :</p>
-          <input type="text" id="desc" name="essai" required></input>
+    <form method="post">
+      <div class="flex">
+        <div class="main">
+          <h3>Liste de cadeaux interactive de Frederic</h3>
+          <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
+                                          ami.e.s.</p>
+
+            <h4 class="mb-3">Ajouter un item à la liste</h4>
+            <div class="mb-3">
+              <p>Description :</p>
+              <input type="text" id="desc"></input>
+            </div>
+            <div class="mb-4">
+              Valeur estimée ($) :<br>
+              <input type="number" id="valeur">
+            </div>
+            <div class="d-grid gap-2">
+              <input type="button" value="Ajouter" onclick="ajouter()" class="vert"></input>
+              <br>
+              <input type="reset" value="Annuler"></input>
+            </div>
         </div>
-        <div class="mb-4">
-          Valeur estimée ($) :<br>
-          <input type="number" id="valeur">
-        </div>
-        <div class="d-grid gap-2">
-          <button onclick="ajouter()" class="vert">Ajouter</button>
-          <br>
-          <button>Annuler</button>
+        <div class="liste">
+          <h4>Ma liste</h4>
+          <div class="list" id="maListe">
+            <p>Crocs des fêtes <span>14$</span></p>
+            <p>Une tuque des fêtes <span>42$</span></p>
+            <p>Un chandail laid des fêtes <span>25$</span></p>
+          </div>
+          <div class="total">
+            <p>Total: <span id="total">81</span>$</p>
+          </div>
+          <div class="flex">
+            <p class="col-form-label h3">Destinataire:</p>
+            <input id="email" onblur="ajouterEmail()"> <!-- Ajouter email au formulaire -->
+          </div>
+          <div class="f-grid">
+            <input type="submit" value="Confirmer et Envoyer" class="vert"></input>
+            <input onclick="effacer()" type="submit" value="Recommencer"></input>
+          </div>
         </div>
       </div>
-      <div class="liste">
-        <h4>Ma liste</h4>
-        <div class="list" id="maListe">
-          <p>Crocs des fêtes <span>14$</span></p>
-          <p>Une tuque des fêtes <span>42$</span></p>
-          <p>Un chandail laid des fêtes <span>25$</span></p>
-        </div>
-        <div class="total">
-          <p>Total: <span id="total">81</span>$</p>
-        </div>
-        <div class="flex">
-          <p class="col-form-label h3">Destinataire:</p>
-          <input id="email" type="text">
-        </div>
-        <div class="f-grid">
-          <button class="vert">Confirmer et envoyer</button>
-          <button>Recommencer</button>
-        </div>
-      </div>
-    </div>
+      <input hidden name="item1" value="Crocs des fetes">
+      <input hidden name="item2" value="Une tuque des fetes">
+      <input hidden name="item3" value="Un chandail laid des fetes">
+    </form>
   </body>
 </html>

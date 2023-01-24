@@ -1,3 +1,4 @@
+compteur = 4;
 function ajouter(){
     // Entree de valeur dans un element
     let item = document.getElementById("desc").value;          // id="desc"
@@ -14,6 +15,18 @@ function ajouter(){
     let nouveauPrix = +ancienPrix + +prix;                            // +variable : convertir en numerique
     document.getElementById("total").innerText = nouveauPrix;
 
-
-    // alert("L'item est bien ajouté"); // Alerte Pop-up
+    // Creer des nouveaux input hidden dans le formulaire pour envoyer par email
+    nouveauInput = document.createElement("input");
+    nouveauInput.setAttribute("hidden", true);
+    nouveauInput.setAttribute("name", "item_"+compteur);
+    nouveauInput.setAttribute("value", item);
+    document.forms[0].append(nouveauInput);
+    compteur++;
+}
+function ajouterEmail() {
+    var email = document.getElementById("email").value;
+    document.forms[0].action = "mailto:"+email;
+}
+function effacer() {
+    document.forms[0].action = "";
 }
